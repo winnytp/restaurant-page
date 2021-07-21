@@ -174,3 +174,14 @@ footer a {
     color: white;
     font-weight: 800;
 }
+
+@media only screen and (max-width: 425px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+    footer p {
+        margin: 5px auto;
+    }
+}
