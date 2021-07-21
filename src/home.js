@@ -1,5 +1,3 @@
-import pancake from './pancake.png';
-
 function renderHome() {
     console.log('Loading home.')
 
@@ -49,7 +47,7 @@ function renderHome() {
 
     const pancakeImageDiv = document.getElementById('pancake-image');
     let pancakeImage = document.createElement('img');
-    pancakeImage.setAttribute('src', '../src/pancake.png');
+    pancakeImage.setAttribute('src', './assets/pancake.png');
     pancakeImage.setAttribute('width', '256');
     pancakeImage.setAttribute('height', '256');
     pancakeImageDiv.appendChild(pancakeImage);
