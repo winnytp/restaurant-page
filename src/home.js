@@ -1,3 +1,5 @@
+import pancake from './pancake.png';
+
 function renderHome() {
     console.log('Loading home.')
 
