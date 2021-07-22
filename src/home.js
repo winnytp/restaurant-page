@@ -1,15 +1,11 @@
-function renderHome() {
-    console.log('Loading home.')
+import makeElement from './make.js';
+import renderMenu from './menu.js';
 
-    function makeElement(tag, id, c, text) {
-        let create = document.createElement(tag);
-        if (id) create.setAttribute('id', id);
-        if (c) create.setAttribute('class', c);
-        if (text) create.innerHTML = text;
-        return create;
-    }
+function renderHome() {
+    console.log('Loading home page.')
 
     const content = document.querySelector('#content');
+    content.innerHTML = '';
     content.appendChild(makeElement('nav'));
 
     const nav = document.querySelector('nav');
@@ -17,8 +13,8 @@ function renderHome() {
 
     const navUl = document.querySelector('ul');
     navUl.appendChild(makeElement('li', 'maple', '', `Maple's`));
-    navUl.appendChild(makeElement('li', '', 'right', 'Menu'));
-    navUl.appendChild(makeElement('li', '', '', 'Contact'));
+    navUl.appendChild(makeElement('li', 'menu-btn', 'right', 'Menu'));
+    navUl.appendChild(makeElement('li', 'contact-btn', '', 'Contact'));
 
     content.appendChild(makeElement('main'));
 
@@ -54,8 +50,13 @@ function renderHome() {
 
     content.appendChild(makeElement('footer'));
     const footer = document.querySelector('footer');
+    footer.classList.remove('fixed-bottom');
     footer.appendChild(makeElement('p', '', '', `Coded by <a href='https://github.com/winnytp/restaurant-page'>@winnytp`));
     footer.appendChild(makeElement('p', '', '', `Maple's © 2021 | All Rights Reserved`));
+
+    // Add event listeners
+    const menuBtn = document.getElementById('menu-btn');
+    menuBtn.addEventListener('click', () => renderMenu());
 }
 
 export default renderHome

@@ -1,6 +1,10 @@
+import renderMenu from './menu.js';
 import renderHome from './home.js';
-// import './style.css';
-
-console.log(`I'm working.`);
 
 renderHome();
+
+const homeBtn = document.getElementById('maple');
+homeBtn.addEventListener('click', () => renderHome());
+
+const menuBtn = document.getElementById('menu-btn');
+menuBtn.addEventListener('click', () => renderMenu());
