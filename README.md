@@ -1,2 +1,2 @@
 # restaurant-page
-Restaurant page.
+Restaurant page built using webpack.
