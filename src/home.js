@@ -1,5 +1,6 @@
 import makeElement from './make.js';
 import renderMenu from './menu.js';
+import renderContact from './contact.js';
 
 function renderHome() {
     console.log('Loading home page.')
@@ -57,6 +58,9 @@ function renderHome() {
     // Add event listeners
     const menuBtn = document.getElementById('menu-btn');
     menuBtn.addEventListener('click', () => renderMenu());
+
+    const contactBtn = document.getElementById('contact-btn');
+    contactBtn.addEventListener('click', () => renderContact());
 }
 
 export default renderHome

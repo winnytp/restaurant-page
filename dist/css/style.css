@@ -150,7 +150,7 @@ main h2 {
     font-style: italic;
 }
 
-#menu h2 {
+#menu h2, #contact h2 {
     font-weight: 700;
 }
 
@@ -163,7 +163,7 @@ main h2 {
     box-shadow: none;
 }
 
-.menu-row div h3 {
+.menu-row div h3, #contact h3 {
     font-family: 'Roboto Condensed', Roboto, sans-serif;
     font-weight: 500;
 }
@@ -229,6 +229,11 @@ footer a {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.vertical-align {
+    align-items: center;
+    height: 75vh;
 }
 
 @media only screen and (max-width: 425px) {
