@@ -1,6 +1,4 @@
 import makeElement from './make.js';
-import renderHome from './home.js';
-import renderMenu from './menu.js';
 
 function renderContact() {
     console.log('Loading contact page.');
@@ -16,13 +14,6 @@ function renderContact() {
 
     const footer = document.querySelector('footer');
     footer.classList.add('fixed-bottom');
-
-    // Event Listeners
-    const menuBtn = document.getElementById('menu-btn');
-    menuBtn.addEventListener('click', () => renderMenu());
-
-    const homeBtn = document.getElementById('maple');
-    homeBtn.addEventListener('click', () => renderHome());
 }
 
 export default renderContact

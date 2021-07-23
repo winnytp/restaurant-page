@@ -56,6 +56,9 @@ function renderHome() {
     footer.appendChild(makeElement('p', '', '', `Maple's © 2021 | All Rights Reserved`));
 
     // Add event listeners
+    const homeBtn = document.getElementById('maple');
+    homeBtn.addEventListener('click', () => renderHome());
+
     const menuBtn = document.getElementById('menu-btn');
     menuBtn.addEventListener('click', () => renderMenu());
 
